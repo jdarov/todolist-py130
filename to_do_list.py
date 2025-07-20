@@ -87,6 +87,17 @@ class TodoList:
     def to_list(self):
         return self._todos.copy()
     
+    def each(self, callback):
+        for todo in self._todos:
+            callback(todo)
+
+    def select(self, callback):
+        new_list = TodoList(self.title)
+
+        for todo in filter(callback, self._todos):
+            new_list.add(todo)
+        return new_list
+    
     def __str__(self):
         return (
             f"---- {self.title} ----\n" + 
@@ -338,3 +349,48 @@ def step_10():
     # ---- Today's Todos -----
 
 step_10()
+def step_11():
+    print('--------------------------------- Step 11')
+    todo_list = setup()
+
+    todo_list.mark_all_undone()
+    print(todo_list)
+    # ---- Today's Todos -----
+    # [ ] Buy milk
+    # [ ] Clean room
+    # [ ] Go to gym
+
+    def done_if_y_in_title(todo):
+        if 'y' in todo.title:
+            todo.done = True
+
+    todo_list.each(done_if_y_in_title)
+    print(todo_list)
+    # ---- Today's Todos -----
+    # [X] Buy milk
+    # [ ] Clean room
+    # [X] Go to gym
+
+    todo_list.each(lambda todo: print('>>>', todo))
+    # >>> [X] Buy milk
+    # >>> [ ] Clean room
+    # >>> [X] Go to gym
+
+step_11()
+def step_12():
+    print('--------------------------------- Step 12')
+    todo_list = setup()
+
+    def y_in_title(todo):
+        return 'y' in todo.title
+
+    print(todo_list.select(y_in_title))
+    # ---- Today's Todos -----
+    # [ ] Buy milk
+    # [ ] Go to gym
+
+    print(todo_list.select(lambda todo: todo.done))
+    # ---- Today's Todos -----
+    # [X] Clean room
+
+step_12()
