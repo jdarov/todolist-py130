@@ -16,8 +16,10 @@ This course and project will take our Python skills to the next level. We will s
 ## 📁 Directory Structure
 
 ```
-todolist/         # Main application directory (currently in development)
-├── branches/     # Git branches will contain feature-specific or experimental versions
+todolist/ # Main application directory (currently in development)
+├── branches/ # Git branches will contain feature-specific or experimental versions
+├── high_order/ # Directory for high-order function examples and exercises
+│ └── high_order.py # Demonstrates use of callbacks and closures
 ```
 
 More directories and files will be added as the project grows.
