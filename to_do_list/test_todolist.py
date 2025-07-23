@@ -100,6 +100,9 @@ class TestTodoList(unittest.TestCase):
         self.assertTrue(self.todos.all_done())
     
     def test_select(self):
+        new_list = self.todos.select(lambda todo: todo.title == 'Buy Milk')
         
+        self.assertEqual(new_list._todos[0], self.todo1)
+    
 if __name__ == '__main__':
     unittest.main()
