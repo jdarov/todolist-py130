@@ -28,12 +28,17 @@ Mr. Schafer
 Mr Smith
 Ms Davis
 Mrs. Robinson
-Mr.
+Mr.T
+
+corey-123-schafer@my-work.net
 """
 
 sentence = "Start a sentence and then bring it to an end"
 
-pattern = re.compile(r'\D')
+pattern = re.compile(r'(?i)\b[\w-]+@[\w-]+\.(com|edu|net)\b')
 matches = pattern.finditer(text)
 for match in matches:
-    print(match)
+    print(match.group(0))
+
+second_text = "Split!     on---many      spaces"
+print([token for token in re.split(r'\s+|([!.?,-]+)', second_text) if token is not None])

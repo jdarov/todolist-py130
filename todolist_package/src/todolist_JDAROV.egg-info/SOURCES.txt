@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+src/todolist_JDAROV/__init__.py
+src/todolist_JDAROV/to_do_list.py
+src/todolist_JDAROV/todo.py
+src/todolist_JDAROV.egg-info/PKG-INFO
+src/todolist_JDAROV.egg-info/SOURCES.txt
+src/todolist_JDAROV.egg-info/dependency_links.txt
+src/todolist_JDAROV.egg-info/entry_points.txt
+src/todolist_JDAROV.egg-info/top_level.txt
+tests/test_todolist.py

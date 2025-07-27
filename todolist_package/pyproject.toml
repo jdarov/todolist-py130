@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "todolist_JDAROV"
+version = "0.1.0"
+authors = [
+    {name = "Joshua Darovitz", email = "joshdarovitz@gmail.com"},
+]
+description = "A fantastic todo list application."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+
+]
+dependencies = []
+keywords = ["todo", "tasks", "productivity", "cli"]
+
+# code omitted for brevity
+
+[project.urls]
+Homepage = "https://github.com/jdarov/todolist-py130"
+Issues = "https://github.com/jdarov/todolist-py130/issues"
+
+[project.scripts]
+todolist = "todolist.__main__:main"
+
+
+
