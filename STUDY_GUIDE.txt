@@ -1,0 +1,23 @@
+PYTHON TOPICS
+First-Class and Higher-Order Functions
+Generator Expressions
+Lambda functions
+File Handling
+Function arguments and parameters (positional, keyword, positional-only, keyword-only, *args, **kwargs, default parameters)
+Closures
+Partial function application
+Decorators
+Modules
+Pure functions and side effects
+
+TESTING WITH UNITTEST
+Testing terminology
+Writing and running tests with unittest framework
+Utilizing assertions for testing equality and other conditions (assertEqual, assertIs etc.)
+SEAT approach
+Understanding code coverage
+
+PACKAGING CODE
+Project directory layout
+Using pip for package installation and management
+packaging projects
