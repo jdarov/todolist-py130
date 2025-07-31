@@ -15,6 +15,17 @@ send_message("Alice", "Hi", "file1.txt", "file2.png", urgent=True, sent_by="Josh
 # Urgent: True = (keyword only, since it comes AFTER the *args parameter)
 # Metadata: {sent_by: Josh, priority: 1} = (any number of keyword only args seperated by key/value pairs in a **kwargs dict)
 
+
+""""
+write a function that
+1. takes a variable sending an email TO that is positional only
+2. variable message that is positional only but optional
+3. any number of attachment variables
+4. one keyword only argument 
+5. any number of keyword only arguments 
+
+print each (including a dict)
+"""
 #Q2: 
 
 def calculate_total(price=50, tax=0.1, discount=0.0, *, tip=0.15):

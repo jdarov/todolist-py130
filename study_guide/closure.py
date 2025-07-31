@@ -26,7 +26,6 @@ Does this mean x is still available always or n?
 def counter():
     count = 0
     def increment():
-        nonlocal count
         count += 1
         return count
     return increment
@@ -48,3 +47,37 @@ def make_greeter(name):
     def greet(greeter):
         return f'{greeter}, {name}'
     return greet
+
+#
+def minus(x, y):
+        return x - y
+        
+def make_subtractor(y):
+        def subtract_from(x):
+                return minus(x, y)
+                
+        return subtract_from
+        
+sub10 = make_subtractor(10)
+sub50 = make_subtractor(50)
+
+print(sub50(25)) # -25
+# when we call sub50, it "remembers" that y = 50
+print(sub10(100)) # 90
+# when we call sub10, it "remembers" that y = 10
+
+#Can you use PFA to always send an email from 'Alice"
+from functools import partial
+
+def format_message(name):
+    def from_alice(recipient, message):
+
+        return f"From: {name} To: {recipient} — {message}"
+    return from_alice
+
+from_alice = format_message('Alice')
+
+
+print(from_alice('Bob', 'Hi!'))
+print(from_alice('Josh', 'Bye!'))
+
